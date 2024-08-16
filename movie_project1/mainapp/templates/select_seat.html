@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/58c8275319.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<style>
+    .image-box img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .inner-top{
+        margin: auto;
+        width: 950px;
+        display: flex;
+        float: left;
+        /* height: 350px; */
+    }
+    .box-wrap{
+        width: 100%;
+        margin: auto;
+    }
+    .container{
+        margin: auto;
+        width: 100%;
+    }
+    .top{
+        width: 100%;  
+        display: flex;
+        float: left;
+        margin: auto;
+        
+    }
+    .metas-left{
+        width: 60%;
+        /* background-color: antiquewhite; */
+        border: 1px solid gray;
+        padding: 20px;
+    }
+    .metas-right{
+        width: 40%;
+        background-color: antiquewhite;
+        border: 1px solid gray;
+    }
+    .black-container{
+        background-color: rgb(107, 107, 107);
+        color: whitesmoke;
+        padding: 10px 30px;
+        width: max-content;
+        border-radius: 10px;
+    }
+    .btn-white {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc; /* Optional: add border for better visibility */
+        }
+        .btn-white:hover {
+            background-color: #f8f9fa; /* Slightly gray on hover */
+            color: black;
+        }
+        .box-white{
+        margin-top: 10px;
+        background-color: whitesmoke;
+        color: rgb(107, 107, 107);
+        padding: 5px;
+        width: max-content;
+        border-radius: 10px;
+        }
+        .moviename{
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .last-buttons{
+            display: flex;
+            float: inline-end;
+            margin-right: 40px;
+        }
+        .show-center{
+            display: flex;
+            margin: auto;
+           
+        }
+        .show-boxes{
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            width: max-content;
+            display: flex;
+            float: left;
+            border: 1px solid beige;
+            padding: 10px 30px;
+            margin: 30px;
+        }
+        .inner-show-center{
+            display: flex;
+            margin: auto;
+            width: max-content;
+        }
+        .show-boxes {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc; /* Optional: add border for better visibility */
+        }
+        .show-boxes:hover {
+            background-color: #c9dff5; /* Slightly gray on hover */
+            color: black;
+        }
+
+        .seat-row {
+        display: flex;
+        flex-wrap: wrap; 
+        margin-bottom: 10px;
+        gap: 10px; 
+    }
+    .seat {
+        color: yellowgreen;
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        width: 50px;
+        /* flex: 1 1 calc(20% - 10px);  */
+    }
+    .oneclass{
+        background-color: #295988;
+        color: blueviolet;
+    }
+    .zeroclass{
+        background-color: rgb(173, 74, 74);
+        color: rgb(16, 239, 239);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row mt-4 mb-3">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid px-5">
+                  <a class="navbar-brand" href="#">
+                    <div class="logo">
+                        <img src="{% static 'images/XLOGO.jpg' %}" style="width: 50px; width: 50px;" alt="xlogo">Movies
+                    </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Select Show</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Select Seat</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">View Orders</a>
+                      </li>
+                      <!-- <li>
+                        <form class="d-flex" role="search">
+                            <input style="width:300px;" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                          </form>
+                      </li> -->
+                    </ul>
+                    <ul>
+                        {% if user.is_authenticated %}
+                            <a class="nav-link" href="credentials/logout/">Logout</a>
+                        {% else %}
+                            <a class="nav-link" href="/credentials/login/">Login</a>
+                        {% endif %}
+                        
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <hr>
+        {% if user.is_authenticated %}
+    hy, {{user}}
+    {% endif %}
+        <div class="row show-center mb-5 mt-5">
+            <h3 style="text-align: center; margin-bottom: 40px;">Select Seat</h3>
+            <hr>
+           <script>
+            
+           </script>   
+            {% for i in st%}
+            <div class="seat-row d-flex mx-auto text-center">
+                {% for j in i %}
+                <div class="seat d-flex mx-auto text-center">
+                    <button class="{% if j.status %}oneclass{% else %}zeroclass{% endif %} " id="myButton" onclick="getdata('{{j.seat_number}}');" value="{{j.seat_number}}">{{j.seat_number}}</button>   
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <script>
+            k=[]
+            function getdata(value) {
+                console.log(value);
+                k.push(value)     
+                console.log(k);
+                document.getElementById('seatbox').value=k;
+            }
+        </script>
+        {{seatnos}}
+        <form action="/changeSeatStatus" method="get">
+            <input id="seatbox" name="seatnos" type="text"> <button type="submit" onclick="select_seat();">book</button>
+        </form>
+    </div>
+</body>
+
+</html>
